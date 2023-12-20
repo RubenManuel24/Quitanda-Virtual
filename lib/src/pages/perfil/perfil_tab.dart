@@ -101,25 +101,31 @@ class _PerfilTabState extends State<PerfilTab> {
                         SizedBox(
                           height: 45,
                           child: Obx(() => ElevatedButton(
-                                                      style: ElevatedButton.styleFrom(
-                                                        backgroundColor: Colors.green,
-                                                        shape: RoundedRectangleBorder(
-                                                          borderRadius: BorderRadius.circular(30),
-                                                        ),
-                                                      ),
-                                                      onPressed: authController.isLoandig.value ? null : () {
-                                                        if(_formKey.currentState!.validate()){
-                                                            authController.changePassword(
-                                                              currentPassword: currentPasswordController.text, 
-                                                              newPassword: newPasswordController.text
-                                                            );
-                                                        }
-                                                      },
-                                                      child: authController.isLoandig.value ? const CircularProgressIndicator() : Text(
-                                                        "Atualizar",
-                                                        style: TextStyle(color: Colors.white),
-                                                      ),
-                                                    )),
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.green,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(30),
+                                  ),
+                                ),
+                                onPressed: authController.isLoandig.value
+                                    ? null
+                                    : () {
+                                        if (_formKey.currentState!.validate()) {
+                                          authController.changePassword(
+                                              currentPassword:
+                                                  currentPasswordController
+                                                      .text,
+                                              newPassword:
+                                                  newPasswordController.text);
+                                        }
+                                      },
+                                child: authController.isLoandig.value
+                                    ? const CircularProgressIndicator()
+                                    : Text(
+                                        "Atualizar",
+                                        style: TextStyle(color: Colors.white),
+                                      ),
+                              )),
                         )
                       ]),
                 ),
@@ -207,5 +213,4 @@ class _PerfilTabState extends State<PerfilTab> {
       ),
     );
   }
-  
 }

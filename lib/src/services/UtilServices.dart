@@ -35,7 +35,7 @@ class UtilServices {
   }
   
   //KZ valor
-  String priceToCurrency(double value){
+  String priceToCurrency(var value){
     NumberFormat format = NumberFormat.simpleCurrency(name: 'Kz ');
     return format.format(value);
   }

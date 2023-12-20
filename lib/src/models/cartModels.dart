@@ -12,7 +12,7 @@ class CartModels {
     required this.product
   });
 
-   double priceQuantity(){
+    priceQuantity(){
     return product.price * quantity;
    }
 

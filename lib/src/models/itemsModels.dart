@@ -3,7 +3,7 @@ class ItemsModels {
   String description;
   String title;
   String picture;
-  double price;
+  var price;
   String unit;
   
   ItemsModels({
@@ -21,7 +21,7 @@ class ItemsModels {
        description: map["description"],
        title: map["title"],
        picture: map["picture"],
-       price: map["price"],
+       price:  map["price"],
        unit: map["unit"]
     );
    }

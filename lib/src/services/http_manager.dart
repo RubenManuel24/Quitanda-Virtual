@@ -11,7 +11,7 @@ abstract class HttMethods {
 class HttpManager {
   Future<Map> restRequest(
       {required urlEndPonit, required method, Map? headers, Map? body}) async {
-    //Headers da RequisiçãO
+    //Headers da Requisição
     final defaultHeader = headers?.cast<String, String>() ?? {}
       ..addAll({
         'content-type': 'application/json',
